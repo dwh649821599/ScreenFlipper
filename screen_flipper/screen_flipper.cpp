@@ -102,6 +102,8 @@ int MoveWindow2Monitor(
 }
 
 int main() {
-    HWND handler = FindWindowByProcessName(L"Clash.exe");
-    MoveWindow2Monitor(1, handler);
+    //HWND handler = FindWindowByProcessName(L"Clash.exe");
+    HWND handler = GetForegroundWindow();
+    ShowWindow(handler, SW_MAXIMIZE);
+    //MoveWindow2Monitor(0, handler);
 }
